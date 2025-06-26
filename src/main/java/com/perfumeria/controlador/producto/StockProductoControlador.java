@@ -2,6 +2,7 @@ package com.perfumeria.controlador.producto;
 
 import com.perfumeria.configuracion.Config;
 import com.perfumeria.controlador.navegacion.NavegadorProducto;
+import com.perfumeria.modelo.ArchivoPDF;
 import com.perfumeria.modelo.producto.Producto;
 import com.perfumeria.utilidades.FrameUtils;
 import com.perfumeria.vista.reporte.IFrameReporteStock;
@@ -77,6 +78,10 @@ public class StockProductoControlador implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource().equals(frameReporteStock.getBtnRecargar())) {
             accionRacargar();
+        }
+        
+        if (e.getSource().equals(frameReporteStock.getBtnGenerarPDF())) {
+            new ArchivoPDF().CrearPDFReporteStock();
         }
 
         if (e.getSource().equals(frameReporteStock.getBtnActualizarStock())) {

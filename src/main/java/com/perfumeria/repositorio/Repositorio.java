@@ -28,7 +28,7 @@ public interface Repositorio<T> {
      * @param id identificador del objeto
      * @return objeto correspondiente o null si no existe
      */
-    T buscarPorId(Long id);
+    T buscarPorId(Integer id);
 
     /**
      * Crea un nuevo registro en el repositorio.
@@ -45,16 +45,9 @@ public interface Repositorio<T> {
     void editar(T repo);
 
     /**
-     * Edita un objeto existente según su identificador.
-     *
-     * @param id identificador del objeto
-     */
-    void editarPorId(Long id);
-
-    /**
      * Elimina un objeto del repositorio según su identificador.
      *
      * @param id identificador del objeto
      */
-    void eliminar(Long id);
+    void eliminar(Integer id);
 }

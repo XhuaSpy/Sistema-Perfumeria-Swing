@@ -1,2 +1,4 @@
 /target/
-/pdf/
+pdf/*
+db/perfumeria.db
+

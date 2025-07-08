@@ -1,10 +1,10 @@
 package com.perfumeria.configuracion;
 
-import com.perfumeria.modelo.Usuario;
 import com.perfumeria.modelo.producto.Producto;
+import com.perfumeria.modelo.venta.Venta;
 import com.perfumeria.repositorio.Repositorio;
-import com.perfumeria.repositorio.list.ProductoListaRepositorio;
-import com.perfumeria.repositorio.list.UsuarioListaRepositorio;
+import com.perfumeria.repositorio.sqlite.ProductoSqliteRepositorio;
+import com.perfumeria.repositorio.sqlite.VentasSqliteRepositorio;
 
 /**
  * Ésta clase pretende ser una clase donde se acceda a las configuraciones
@@ -16,17 +16,14 @@ import com.perfumeria.repositorio.list.UsuarioListaRepositorio;
 public class Config {
 
     /**
-     * Repositorio estático que permite el acceso y manipulación de los datos del modelo Usuario.
-     */
-    public static Repositorio<Usuario> usuarioRepositorio;
-
-    /**
      * Repositorio estático que permite el acceso y manipulación de los datos del modelo Producto.
      */
     public static Repositorio<Producto> productoRepositorio;
+    public static Repositorio<Venta> ventaRepositorio;
 
     static {
-        Config.usuarioRepositorio = new UsuarioListaRepositorio();
-        Config.productoRepositorio = new ProductoListaRepositorio();
+        //Config.productoRepositorio = new ProductoListaRepositorio();
+        Config.productoRepositorio = new ProductoSqliteRepositorio();
+        Config.ventaRepositorio = new VentasSqliteRepositorio();
     }
 }

@@ -1,6 +1,7 @@
 package com.perfumeria.controlador;
 
 import com.perfumeria.controlador.navegacion.NavegadorProducto;
+import com.perfumeria.controlador.navegacion.NavegadorVentas;
 import com.perfumeria.utilidades.FrameUtils;
 import com.perfumeria.vista.FrameMain;
 import java.awt.event.ActionEvent;
@@ -26,11 +27,17 @@ public class PrincipalControlador implements ActionListener {
     private NavegadorProducto navegadorProductos;
 
     /**
+     * Navegador que permite la navegación entre vistas relacionadas con ventas.
+     */
+    private NavegadorVentas navegadorVentas;
+
+    /**
      * Constructor que inicializa la ventana principal y el navegador de productos.
      */
     public PrincipalControlador() {
         this.framePrincipal = new FrameMain();
         this.navegadorProductos = new NavegadorProducto(framePrincipal.getEscritorio());
+        this.navegadorVentas = new NavegadorVentas(framePrincipal.getEscritorio());
     }
 
     /**
@@ -73,7 +80,9 @@ public class PrincipalControlador implements ActionListener {
         if (e.getSource().equals(framePrincipal.getBtnReporteStock())) {
             navegadorProductos.abrirStockProductos();
         }
-            
+        if (e.getSource().equals(framePrincipal.getBtnHistorialVentas())) {
+            navegadorVentas.abrirListaProductos();
+        }  
     }
 
     /**

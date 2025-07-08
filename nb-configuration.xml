@@ -7,11 +7,15 @@ therefore it is assumed to be part of version control checkout.
 Without this configuration present, some functionality in the IDE may be limited or fail altogether.
 -->
     <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+        <word>carga</word>
         <word>controlador</word>
         <word>eliminar</word>
         <word>Excepción</word>
         <word>implementación</word>
+        <word>inicia</word>
         <word>inicializa</word>
+        <word>interfaz</word>
+        <word>navegador</word>
         <word>producto</word>
     </spellchecker-wordlist>
 </project-shared-configuration>

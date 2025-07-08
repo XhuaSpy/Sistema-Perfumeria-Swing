@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JInternalFrameFormInfo">
-  <Properties>
-    <Property name="closable" type="boolean" value="true"/>
-  </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
   </SyntheticProperties>
@@ -23,76 +20,65 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="reporteStockLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="btnRecargar" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btnActualizarStock" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="btnGenerarPDF" min="-2" max="-2" attributes="0"/>
+                      <Component id="titulo" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
-                  <Component id="reporteStockScrolePane" pref="770" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="tablaHistorialPane" pref="587" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Component id="barraHerramientas" min="-2" pref="138" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="titulo" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="reporteStockLabel" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btnGenerarPDF" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnActualizarStock" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnRecargar" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="barraHerramientas" max="32767" attributes="0"/>
+                  <Component id="tablaHistorialPane" pref="452" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="reporteStockScrolePane" max="32767" attributes="0"/>
-              <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="reporteStockLabel">
+    <Component class="javax.swing.JLabel" name="titulo">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="JetBrains Mono" size="24" style="2"/>
+          <Font name="JetBrains Mono" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Reporte Stock"/>
+        <Property name="text" type="java.lang.String" value="Historial de ventas"/>
       </Properties>
     </Component>
-    <Container class="javax.swing.JScrollPane" name="reporteStockScrolePane">
+    <Container class="javax.swing.JScrollPane" name="tablaHistorialPane">
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
       </AuxValues>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="reporteStockTable">
+        <Component class="javax.swing.JTable" name="tablaHistorial">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="5" rowCount="4">
-                <Column editable="true" title="Id" type="java.lang.Object"/>
-                <Column editable="true" title="Tipo" type="java.lang.Object"/>
-                <Column editable="true" title="Nombre" type="java.lang.Object"/>
-                <Column editable="true" title="Cantidad por lote" type="java.lang.Object"/>
-                <Column editable="true" title="Cantidad Stock" type="java.lang.Object"/>
+              <Table columnCount="4" rowCount="4">
+                <Column editable="true" title="id" type="java.lang.Object"/>
+                <Column editable="true" title="fecha" type="java.lang.Object"/>
+                <Column editable="true" title="monto" type="java.lang.Object"/>
+                <Column editable="true" title="productos" type="java.lang.Object"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
               <TableColumnModel selectionModel="0">
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                  <Title/>
-                  <Editor/>
-                  <Renderer/>
-                </Column>
                 <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
@@ -122,20 +108,42 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="btnGenerarPDF">
+    <Container class="javax.swing.JToolBar" name="barraHerramientas">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Generar Pdf"/>
+        <Property name="orientation" type="int" value="1"/>
+        <Property name="rollover" type="boolean" value="true"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnActualizarStock">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Actualizar stock"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnRecargar">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Recargar"/>
-      </Properties>
-    </Component>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="btnRecagar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Recargar"/>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+            <Property name="verticalTextPosition" type="int" value="3"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnVerDetalle">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Ver Detalle"/>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+            <Property name="verticalTextPosition" type="int" value="3"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnGenerarFactura">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Generar Factura"/>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+            <Property name="verticalTextPosition" type="int" value="3"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGenerarFacturaActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
   </SubComponents>
 </Form>

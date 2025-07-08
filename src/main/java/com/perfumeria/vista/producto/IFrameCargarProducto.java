@@ -256,6 +256,8 @@ public class IFrameCargarProducto extends javax.swing.JInternalFrame {
         codigo = new javax.swing.JTextField();
         tituloLabel = new javax.swing.JLabel();
 
+        setClosable(true);
+
         categoriaLabel.setText("Categoria");
 
         categoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A", "AA", "AAA", "Generico" }));

@@ -67,6 +67,8 @@ public class IFrameListaProducto extends javax.swing.JInternalFrame {
         btnRecargar = new javax.swing.JButton();
         btnAgregarProducto = new javax.swing.JButton();
 
+        setClosable(true);
+
         productosTabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 

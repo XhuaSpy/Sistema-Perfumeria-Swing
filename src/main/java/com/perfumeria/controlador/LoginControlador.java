@@ -1,12 +1,9 @@
 package com.perfumeria.controlador;
 
-import com.perfumeria.configuracion.Config;
-import com.perfumeria.modelo.Usuario;
 import com.perfumeria.vista.FrameLogin;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -41,27 +38,5 @@ public class LoginControlador implements ActionListener {
         }
     }
 
-    private void actionBtnLogin() {
-        Usuario usuarioActivo = validarUsuario(
-                frameLogin.getUsuario().getText(),
-                frameLogin.getContrasenia().getText());
-
-        if (usuarioActivo == null) {
-            JOptionPane.showMessageDialog(frameLogin, "Usuario no encontrado: ",
-                    "Error", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-
-        JOptionPane.showMessageDialog(frameLogin, "Se encontró el usuario",
-                "Error", JOptionPane.PLAIN_MESSAGE);
-    }
-
-    private Usuario validarUsuario(String nombre, String contraseña) {
-        for (Usuario u : Config.usuarioRepositorio.listar()) {
-            if (u.loging(nombre, contraseña)) {
-                return u;
-            }
-        }
-        return null;
-    }
+    private void actionBtnLogin() {}
 }

@@ -163,6 +163,8 @@ public class IFrameActualizarStock extends javax.swing.JInternalFrame {
         cantidadActualLabel = new javax.swing.JLabel();
         cantidadActual = new javax.swing.JLabel();
 
+        setClosable(true);
+
         tituloLabel.setFont(new java.awt.Font("JetBrains Mono", 2, 24)); // NOI18N
         tituloLabel.setText("Actualizar stock de producto");
 
@@ -178,6 +180,8 @@ public class IFrameActualizarStock extends javax.swing.JInternalFrame {
 
         lotesAgregadosLabel.setText("lotes agregados: ");
 
+        lotesAgregados.setText("0");
+        lotesAgregados.setToolTipText("");
         lotesAgregados.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lotesAgregadosActionPerformed(evt);
@@ -195,9 +199,9 @@ public class IFrameActualizarStock extends javax.swing.JInternalFrame {
                     .addComponent(lotesAgregadosLabel))
                 .addGap(29, 29, 29)
                 .addGroup(porLotePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lotesAgregados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(unidadesPorLote))
-                .addContainerGap(524, Short.MAX_VALUE))
+                    .addComponent(unidadesPorLote)
+                    .addComponent(lotesAgregados, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(413, Short.MAX_VALUE))
         );
         porLotePaneLayout.setVerticalGroup(
             porLotePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -215,6 +219,8 @@ public class IFrameActualizarStock extends javax.swing.JInternalFrame {
 
         unidadesAgregadasLabel.setText("Unidades Agregadas: ");
 
+        unidadesAgregadas.setText("0");
+
         javax.swing.GroupLayout porCantidadEspecificaLayout = new javax.swing.GroupLayout(porCantidadEspecifica);
         porCantidadEspecifica.setLayout(porCantidadEspecificaLayout);
         porCantidadEspecificaLayout.setHorizontalGroup(
@@ -223,8 +229,8 @@ public class IFrameActualizarStock extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addComponent(unidadesAgregadasLabel)
                 .addGap(18, 18, 18)
-                .addComponent(unidadesAgregadas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(523, Short.MAX_VALUE))
+                .addComponent(unidadesAgregadas, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(421, Short.MAX_VALUE))
         );
         porCantidadEspecificaLayout.setVerticalGroup(
             porCantidadEspecificaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

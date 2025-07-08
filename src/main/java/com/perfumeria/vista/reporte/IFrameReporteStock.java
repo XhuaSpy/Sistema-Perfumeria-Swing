@@ -76,6 +76,8 @@ public class IFrameReporteStock extends javax.swing.JInternalFrame {
         btnActualizarStock = new javax.swing.JButton();
         btnRecargar = new javax.swing.JButton();
 
+        setClosable(true);
+
         reporteStockLabel.setFont(new java.awt.Font("JetBrains Mono", 2, 24)); // NOI18N
         reporteStockLabel.setText("Reporte Stock");
 

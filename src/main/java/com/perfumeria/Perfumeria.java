@@ -1,6 +1,7 @@
 package com.perfumeria;
 
 import com.perfumeria.controlador.PrincipalControlador;
+import com.perfumeria.repositorio.sqlite.SqliteConector;
 
 /**
  * Clase principal del sistema de gestión de perfumería.

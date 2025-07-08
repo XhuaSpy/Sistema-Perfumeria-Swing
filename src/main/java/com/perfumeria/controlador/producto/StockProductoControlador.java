@@ -91,7 +91,7 @@ public class StockProductoControlador implements ActionListener {
             if (filaSeleccionada != -1) {
                 Object valorId = tabla.getValueAt(filaSeleccionada, 0);
                 try {
-                    Long id = Long.parseLong(valorId.toString());
+                    Integer id = Integer.parseInt(valorId.toString());
                     Producto producto = Config.productoRepositorio.buscarPorId(id);
 
                     if (producto != null) {

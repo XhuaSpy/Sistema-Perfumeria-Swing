@@ -101,14 +101,6 @@ public class FrameMain extends javax.swing.JFrame {
         this.btnAusteInv = btnAusteInv;
     }
 
-    public JButton getBtnFacturas() {
-        return btnFacturas;
-    }
-
-    public void setBtnFacturas(JButton btnFacturas) {
-        this.btnFacturas = btnFacturas;
-    }
-
     public JButton getBtnHistorialVentas() {
         return btnHistorialVentas;
     }
@@ -428,7 +420,6 @@ public class FrameMain extends javax.swing.JFrame {
         btnVentaPerfume = new javax.swing.JButton();
         btnRecarcaPerfume = new javax.swing.JButton();
         btnHistorialVentas = new javax.swing.JButton();
-        btnFacturas = new javax.swing.JButton();
         jSeparator2 = new javax.swing.JToolBar.Separator();
         InformesLabel = new javax.swing.JLabel();
         btnReporteVentas = new javax.swing.JButton();
@@ -540,12 +531,6 @@ public class FrameMain extends javax.swing.JFrame {
         btnHistorialVentas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnHistorialVentas.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         barraHerramientas.add(btnHistorialVentas);
-
-        btnFacturas.setText("Facturas");
-        btnFacturas.setFocusable(false);
-        btnFacturas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnFacturas.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        barraHerramientas.add(btnFacturas);
         barraHerramientas.add(jSeparator2);
 
         InformesLabel.setText("Informes");
@@ -760,7 +745,6 @@ public class FrameMain extends javax.swing.JFrame {
     private javax.swing.JMenuBar barraJMenu;
     private javax.swing.JButton btnAusteInv;
     private javax.swing.JButton btnBorrarMenu_1;
-    private javax.swing.JButton btnFacturas;
     private javax.swing.JButton btnHistorialVentas;
     private javax.swing.JButton btnProductos;
     private javax.swing.JButton btnReabastecimiento;

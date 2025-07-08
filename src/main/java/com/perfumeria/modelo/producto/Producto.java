@@ -1,10 +1,10 @@
 package com.perfumeria.modelo.producto;
 
 /**
- * Clase que representa un producto dentro del sistema de perfumería.
- * Contiene información como código, nombre, precio, descripción, tipo, categoría,
+ * Clase que representa un producto dentro del sistema de perfumería. Contiene
+ * información como código, nombre, precio, descripción, tipo, categoría,
  * estado, cantidad en stock, unidades por lote y capacidad del envase.
- * 
+ *
  * @author Jesus David Peraza
  */
 public class Producto {
@@ -12,7 +12,7 @@ public class Producto {
     /**
      * Identificador único del producto.
      */
-    private Long id;
+    private Integer id;
 
     /**
      * Código interno del producto.
@@ -65,10 +65,11 @@ public class Producto {
     private Double capacidadEnvase;
 
     /**
-     * Constructor por defecto. Inicializa los atributos con valores vacíos o cero.
+     * Constructor por defecto. Inicializa los atributos con valores vacíos o
+     * cero.
      */
     public Producto() {
-        this.id = 0L;
+        this.id = 0;
         this.codigoProducto = "";
         this.nombre = "";
         this.precio = 0D;
@@ -82,22 +83,24 @@ public class Producto {
 
     /**
      * Constructor que permite crear un producto con datos básicos.
-     * 
+     *
      * @param codigoProducto código del producto
      * @param nombre nombre del producto
      * @param descripcion descripción del producto
      * @param tipo tipo del producto
      * @param categoria categoría del producto
+     * @param unidades
      * @param precio precio del producto
      */
-    public Producto(String codigoProducto, String nombre, String descripcion, TipoProducto tipo, CategoriaProducto categoria, Double precio) {
-        this.id = 0L;
-        this.codigoProducto = codigoProducto;
+    public Producto(String nombre, String descripcion, TipoProducto tipo, 
+            CategoriaProducto categoria, Double precio, Double unidades) {
+        this.id = 0;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.tipo = tipo;
         this.categoria = categoria;
         this.precio = precio;
+        this.unidadesPorLote = unidades;
         this.estado = null;
         this.cantidadEnStock = 0D;
         this.capacidadEnvase = 0D;
@@ -105,7 +108,7 @@ public class Producto {
 
     /**
      * Constructor que incluye identificador y datos básicos.
-     * 
+     *
      * @param id identificador del producto
      * @param codigoProducto código del producto
      * @param nombre nombre del producto
@@ -114,9 +117,9 @@ public class Producto {
      * @param categoria categoría del producto
      * @param precio precio del producto
      */
-    public Producto(long id, String codigoProducto, String nombre, String descripcion, TipoProducto tipo, CategoriaProducto categoria, Double precio) {
+    public Producto(int id, String nombre, String descripcion, TipoProducto tipo, 
+            CategoriaProducto categoria, Double precio) {
         this.id = id;
-        this.codigoProducto = codigoProducto;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.tipo = tipo;
@@ -129,7 +132,7 @@ public class Producto {
 
     /**
      * Constructor completo que inicializa todos los atributos del producto.
-     * 
+     *
      * @param id identificador
      * @param codigoProducto código del producto
      * @param nombre nombre del producto
@@ -142,34 +145,53 @@ public class Producto {
      * @param unidadesPorLote unidades por lote
      * @param capacidadEnvase capacidad del envase
      */
-    public Producto(Long id, String codigoProducto, String nombre, Double precio, String descripcion, TipoProducto tipo, CategoriaProducto categoria, EstadoProducto estado, Double cantidadEnStock, Double unidadesPorLote, Double capacidadEnvase) {
+    public Producto(Integer id, String nombre, String descripcion, Double precio,
+            TipoProducto tipo, CategoriaProducto categoria,Double cantidadEnStock,
+            Double unidadesPorLote) {
         this.id = id;
-        this.codigoProducto = codigoProducto;
         this.nombre = nombre;
-        this.precio = precio;
         this.descripcion = descripcion;
+        this.precio = precio;
         this.tipo = tipo;
         this.categoria = categoria;
-        this.estado = estado;
+        this.cantidadEnStock = cantidadEnStock;
+        this.unidadesPorLote = unidadesPorLote;
+    }
+
+    /* Constructor completo que inicializa todos los atributos del producto.
+     *
+     * @param id identificador
+     * @param codigoProducto código del producto
+     * @param nombre nombre del producto
+     * @param precio precio del producto
+     * @param descripcion descripción del producto
+     * @param tipo tipo del producto
+     * @param categoria categoría del producto
+     * @param estado estado del producto
+     * @param cantidadEnStock cantidad disponible
+     * @param unidadesPorLote unidades por lote
+     * @param capacidadEnvase capacidad del envase
+     */
+    public Producto(Integer id, String nombre, String descripcion, Double precio,
+            TipoProducto tipo, CategoriaProducto categoria,Double cantidadEnStock,
+            Double unidadesPorLote, Double capacidadEnvase) {
+        this.id = id;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.tipo = tipo;
+        this.categoria = categoria;
         this.cantidadEnStock = cantidadEnStock;
         this.unidadesPorLote = unidadesPorLote;
         this.capacidadEnvase = capacidadEnvase;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
-    }
-
-    public String getCodigoProducto() {
-        return codigoProducto;
-    }
-
-    public void setCodigoProducto(String codigoProducto) {
-        this.codigoProducto = codigoProducto;
     }
 
     public String getNombre() {

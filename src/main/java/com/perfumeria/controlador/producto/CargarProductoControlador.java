@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
 /**
  * Controlador que gestiona la carga de nuevos productos desde el formulario.
  * Valida y registra productos tipo aroma o envase en el repositorio.
- * 
+ *
  * @author Jesus Peraza Royero
  */
 public class CargarProductoControlador implements ActionListener {
@@ -35,7 +35,7 @@ public class CargarProductoControlador implements ActionListener {
 
     /**
      * Constructor que recibe una instancia del formulario ya creada.
-     * 
+     *
      * @param frameProducto formulario de carga de productos
      */
     public CargarProductoControlador(IFrameCargarProducto frameProducto) {
@@ -66,8 +66,9 @@ public class CargarProductoControlador implements ActionListener {
     }
 
     /**
-     * Maneja los eventos del formulario, como selección de tipo y botón de carga.
-     * 
+     * Maneja los eventos del formulario, como selección de tipo y botón de
+     * carga.
+     *
      * @param e evento capturado
      */
     @Override
@@ -97,8 +98,8 @@ public class CargarProductoControlador implements ActionListener {
     }
 
     /**
-     * Valida los datos del formulario y crea un nuevo producto en el repositorio.
-     * Muestra errores si hay datos faltantes o inválidos.
+     * Valida los datos del formulario y crea un nuevo producto en el
+     * repositorio. Muestra errores si hay datos faltantes o inválidos.
      */
     private void accionCargar() {
         try {
@@ -114,13 +115,12 @@ public class CargarProductoControlador implements ActionListener {
             }
 
             Producto p = new Producto(
-                    0,
-                    frameCargarProducto.getCodigo().getText(),
                     frameCargarProducto.getNombre().getText(),
                     frameCargarProducto.getDescripcion().getText(),
                     TipoProducto.getTipo(frameCargarProducto.getTipoProducto().getSelectedIndex()),
                     CategoriaProducto.getCategoria(frameCargarProducto.getCategoria().getSelectedIndex()),
-                    Double.valueOf(frameCargarProducto.getPrecio().getText())
+                    Double.valueOf(frameCargarProducto.getPrecio().getText()),
+                    Double.valueOf(frameCargarProducto.getUnidadesPorLote().getText())
             );
 
             if (p.getTipo() == TipoProducto.AROMA) {

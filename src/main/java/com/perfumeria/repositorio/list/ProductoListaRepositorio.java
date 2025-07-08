@@ -27,12 +27,12 @@ public class ProductoListaRepositorio implements Repositorio<Producto> {
      */
     public ProductoListaRepositorio() {
         productos = new ArrayList<>();
-        crear(new Producto(1L, "A001", "Lavanda", 150000D, "Aroma floral relajante", TipoProducto.AROMA, CategoriaProducto.AAA, EstadoProducto.ACTIVO, 0D, 250D, 0D));
-        crear(new Producto(2L, "E001", "Botella 100ml", 3000D, "Envase de vidrio con tapa", TipoProducto.ENVASE, CategoriaProducto.GENERICO, EstadoProducto.ACTIVO, 0D, 10D, 100D));
-        crear(new Producto(3L, "A002", "Vainilla", 30000D, "Aroma dulce clásico", TipoProducto.AROMA, CategoriaProducto.AA, EstadoProducto.ACTIVO, 0D, 250D, 190D));
-        crear(new Producto(4L, "E002", "Frasco plástico 250ml", 20000D, "Envase económico y resistente", TipoProducto.ENVASE, CategoriaProducto.A, EstadoProducto.ACTIVO, 0D, 15D, 150D));
-        crear(new Producto(5L, "A003", "Cítrico", 40000D, "Aroma refrescante y energético", TipoProducto.AROMA, CategoriaProducto.A, EstadoProducto.ACTIVO, 0D, 250D, 0D));
-        crear(new Producto(6L, "B984", "Mini Frasco", 4000D, "", TipoProducto.ENVASE, CategoriaProducto.A, EstadoProducto.ACTIVO, 0D, 20D, 200D));
+        crear(new Producto(1, "Lavanda", "Aroma floral relajante", 150000D, TipoProducto.AROMA, CategoriaProducto.AAA, 0D, 250D, 0D));
+        crear(new Producto(2, "Botella 100ml", "Envase de vidrio con tapa", 3000D, TipoProducto.ENVASE, CategoriaProducto.GENERICO, 0D, 10D, 100D));
+        crear(new Producto(3, "Vainilla", "Aroma dulce clásico", 30000D, TipoProducto.AROMA, CategoriaProducto.AA, 0D, 250D, 190D));
+        crear(new Producto(4, "Frasco plástico 250ml", "Envase económico y resistente", 20000D, TipoProducto.ENVASE, CategoriaProducto.A, 0D, 15D, 150D));
+        crear(new Producto(5, "Cítrico", "Aroma refrescante y energético", 40000D, TipoProducto.AROMA, CategoriaProducto.A, 0D, 250D, 0D));
+        crear(new Producto(6, "Mini Frasco", "uwu", 4000D, TipoProducto.ENVASE, CategoriaProducto.A, 0D, 20D, 200D));
     }
 
     /**
@@ -52,7 +52,7 @@ public class ProductoListaRepositorio implements Repositorio<Producto> {
      * @return el producto encontrado o null si no existe.
      */
     @Override
-    public Producto buscarPorId(Long id) {
+    public Producto buscarPorId(Integer id) {
         if (id == null) {
             return null;
         }
@@ -95,20 +95,11 @@ public class ProductoListaRepositorio implements Repositorio<Producto> {
     }
 
     /**
-     * Método no implementado para editar un producto por su ID.
-     * 
-     * @param id identificador del producto a editar.
-     */
-    @Override
-    public void editarPorId(Long id) {
-    }
-
-    /**
      * Método no implementado para eliminar un producto por su ID.
      * 
      * @param id identificador del producto a eliminar.
      */
     @Override
-    public void eliminar(Long id) {
+    public void eliminar(Integer id) {
     }
 }

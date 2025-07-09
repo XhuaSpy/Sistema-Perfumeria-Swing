@@ -4,8 +4,8 @@
  */
 package com.perfumeria.vista.producto;
 
-import com.perfumeria.modelo.producto.CategoriaProducto;
-import com.perfumeria.modelo.producto.TipoProducto;
+import com.perfumeria.modelo.CategoriaProducto;
+import com.perfumeria.modelo.TipoProducto;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;

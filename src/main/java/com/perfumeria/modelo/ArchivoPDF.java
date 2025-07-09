@@ -23,7 +23,6 @@ import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import com.perfumeria.configuracion.Config;
-import com.perfumeria.modelo.producto.Producto;
 import java.awt.Color;
 import java.awt.Desktop;
 import java.awt.Graphics2D;

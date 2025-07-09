@@ -1,8 +1,8 @@
 package com.perfumeria.controlador.venta;
 
 import com.perfumeria.configuracion.Config;
-import com.perfumeria.modelo.producto.Producto;
-import com.perfumeria.modelo.venta.Venta;
+import com.perfumeria.modelo.Producto;
+import com.perfumeria.modelo.Venta;
 import com.perfumeria.vista.venta.IFrameHistorialVentas;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

@@ -1,7 +1,7 @@
 package com.perfumeria.configuracion;
 
-import com.perfumeria.modelo.producto.Producto;
-import com.perfumeria.modelo.venta.Venta;
+import com.perfumeria.modelo.Producto;
+import com.perfumeria.modelo.Venta;
 import com.perfumeria.repositorio.Repositorio;
 import com.perfumeria.repositorio.sqlite.ProductoSqliteRepositorio;
 import com.perfumeria.repositorio.sqlite.VentasSqliteRepositorio;

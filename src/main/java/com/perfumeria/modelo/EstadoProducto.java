@@ -1,4 +1,4 @@
-package com.perfumeria.modelo.producto;
+package com.perfumeria.modelo;
 
 /**
  * Enumeración que representa el estado de disponibilidad de un producto.

@@ -1,4 +1,4 @@
-package com.perfumeria.modelo.exceptions;
+package com.perfumeria.modelo;
 
 /**
  * Excepción que surge cuando el usuario no ingresa la información pedida.

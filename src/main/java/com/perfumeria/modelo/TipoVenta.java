@@ -1,4 +1,4 @@
-package com.perfumeria.modelo.venta;
+package com.perfumeria.modelo;
 
 public enum TipoVenta {
     VENTA_COMPLETA,

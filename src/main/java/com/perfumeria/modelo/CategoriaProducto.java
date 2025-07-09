@@ -1,4 +1,4 @@
-package com.perfumeria.modelo.producto;
+package com.perfumeria.modelo;
 
 import java.util.ArrayList;
 

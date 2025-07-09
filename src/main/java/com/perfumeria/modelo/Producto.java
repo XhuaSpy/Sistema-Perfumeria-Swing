@@ -1,4 +1,4 @@
-package com.perfumeria.modelo.producto;
+package com.perfumeria.modelo;
 
 /**
  * Clase que representa un producto dentro del sistema de perfumería. Contiene

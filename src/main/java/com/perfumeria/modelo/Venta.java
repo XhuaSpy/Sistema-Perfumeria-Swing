@@ -1,6 +1,6 @@
-package com.perfumeria.modelo.venta;
+package com.perfumeria.modelo;
 
-import com.perfumeria.modelo.producto.Producto;
+import com.perfumeria.modelo.Producto;
 import java.util.ArrayList;
 
 /**

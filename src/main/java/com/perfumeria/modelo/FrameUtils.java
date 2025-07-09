@@ -1,4 +1,4 @@
-package com.perfumeria.utilidades;
+package com.perfumeria.modelo;
 
 import java.awt.Component;
 import java.awt.Container;

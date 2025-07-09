@@ -4,7 +4,7 @@ import com.perfumeria.controlador.producto.ActualizarStockControlador;
 import com.perfumeria.controlador.producto.CargarProductoControlador;
 import com.perfumeria.controlador.producto.ListaProductoControlador;
 import com.perfumeria.controlador.producto.StockProductoControlador;
-import com.perfumeria.modelo.producto.Producto;
+import com.perfumeria.modelo.Producto;
 import com.perfumeria.vista.producto.IFrameActualizarStock;
 import com.perfumeria.vista.producto.IFrameCargarProducto;
 import com.perfumeria.vista.producto.IFrameListaProducto;

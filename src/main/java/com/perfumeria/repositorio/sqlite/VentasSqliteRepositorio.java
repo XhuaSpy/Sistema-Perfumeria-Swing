@@ -1,11 +1,11 @@
 package com.perfumeria.repositorio.sqlite;
 
-import com.perfumeria.modelo.producto.CategoriaProducto;
-import com.perfumeria.modelo.producto.Producto;
-import com.perfumeria.modelo.producto.TipoProducto;
-import com.perfumeria.modelo.venta.TipoVenta;
+import com.perfumeria.modelo.CategoriaProducto;
+import com.perfumeria.modelo.Producto;
+import com.perfumeria.modelo.TipoProducto;
+import com.perfumeria.modelo.TipoVenta;
 import com.perfumeria.repositorio.Repositorio;
-import com.perfumeria.modelo.venta.Venta;
+import com.perfumeria.modelo.Venta;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;

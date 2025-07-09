@@ -2,7 +2,7 @@ package com.perfumeria.controlador;
 
 import com.perfumeria.controlador.navegacion.NavegadorProducto;
 import com.perfumeria.controlador.navegacion.NavegadorVentas;
-import com.perfumeria.utilidades.FrameUtils;
+import com.perfumeria.modelo.FrameUtils;
 import com.perfumeria.vista.FrameMain;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

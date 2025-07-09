@@ -1,9 +1,9 @@
 package com.perfumeria.controlador.producto;
 
 import com.perfumeria.configuracion.Config;
-import com.perfumeria.modelo.exceptions.InformacionIncompletaException;
-import com.perfumeria.modelo.producto.Producto;
-import com.perfumeria.utilidades.FrameUtils;
+import com.perfumeria.modelo.InformacionIncompletaException;
+import com.perfumeria.modelo.Producto;
+import com.perfumeria.modelo.FrameUtils;
 import com.perfumeria.vista.producto.IFrameActualizarStock;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
